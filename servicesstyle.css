@@ -1,0 +1,398 @@
+/* GLOBAL CSS */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--pixelFont);
+}
+:root {
+  --pixelFont: 'VT323';
+  --yellowBrand: rgb(236, 189, 108);
+  --backgroundColor: #12131e;
+}
+/* Global CSS End */
+
+/* Back to Top Button Start*/
+.b2tBtnContainer img {
+  height: 2rem;
+  width: 2rem;
+  z-index: 99;
+}
+#b2tBtn {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 99;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  animation: pulse 4s infinite linear;
+}
+#b2tBtn:hover {
+  transform: scale(1.15);
+}
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+/* Back to Top Button End */
+
+/* NAVBAR START */
+#navbar {
+  background: transparent;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  box-shadow: 1px 1px 20px #12131e;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+.navbar {
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.logo {
+  padding-left: 1.5vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--pixelFont);
+  height: 5vh;
+  width: 20%;
+  color: white;
+}
+.logo span,
+.logo a,
+.logo h1 {
+  font-size: 1.65rem;
+  color: white;
+  text-decoration: none;
+}
+.logo span {
+  color: var(--yellowBrand);
+}
+.navDiv {
+  width: 80%;
+  padding-right: 1.5vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li {
+  margin: 1rem;
+}
+nav a {
+  display: inline-block;
+  text-align: center;
+  line-height: 80%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  text-transform: lowercase;
+  font-family: var(--pixelFont), sans-serif;
+}
+/* Media Query NAVBAR */
+@media screen and (min-width: 800px) {
+  .logo span,
+  .logo a,
+  .logo h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+}
+/* NAVBAR End */
+
+/* GLOBAL SERVICES CSS Start */
+.servicesHeader,
+.servicesHeader span {
+  font-size: 2.75rem;
+  color: white;
+  font-family: var(--pixelFont);
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 0;
+}
+.servicesHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  height: 85vh;
+}
+.servicesBoxSmall {
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  width: 100%;
+  margin: 2% 1%;
+  padding: 1rem 0;
+}
+.servicesBoxLarge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: white;
+  width: 100%;
+  height: 65vh;
+
+  margin: 2% auto;
+}
+.servicesImageBox {
+  border: 2px solid white;
+  margin: 2% auto;
+  border-radius: 20px;
+  height: 33%;
+  width: 100%;
+}
+.servicesText p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0rem 5%;
+  font-size: 1.5rem;
+}
+/* MEDIA QUERY: SERVICES SECTION */
+@media only screen and (min-width: 640px) {
+  .servicesHeader,
+  .servicesHeader span {
+    font-size: 4rem;
+    color: white;
+    font-family: var(--pixelFont);
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    padding: 0;
+  }
+  .servicesContainer {
+    padding: 0 2%;
+    width: 100%;
+  }
+  .servicesBoxSmall {
+    margin: 5% 0 0;
+    max-width: 510px;
+  }
+  .servicesBoxLarge {
+    max-width: 1200px;
+    height: 100%;
+    flex-direction: row;
+    margin: -10% 0 0;
+  }
+  .servicesImageBox {
+    margin: 0 0.5%;
+    height: 50%;
+    width: 100%;
+  }
+  .servicesText p {
+    font-size: 2.25rem;
+  }
+}
+/* GLOBAL SERVICES CSS End */
+
+/* CHARACTER DESIGN SECTION*/
+#characterSection {
+  background: #12131e;
+  background: linear-gradient(#000000ec, #00000000),
+    url(./img/heroBackground/pixelonaut3_body.png);
+  /* background-color: black; */
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.characterImageOne {
+  background: url(./img/gameDesign/characterDesign/character7.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #232323;
+  background-position: center;
+}
+.characterImageTwo {
+  background: url(./img/gameDesign/characterDesign/character6.gif);
+  background-size: 180%;
+  background-position: right;
+}
+.characterImageThree {
+  background: url(./img/gameDesign/characterDesign/character8.gif);
+  background-size: 160%;
+  background-position: left;
+}
+@media screen and (min-width: 500px) {
+  .characterImageOne {
+    background: url(./img/gameDesign/characterDesign/character7.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #232323;
+    background-position: center;
+  }
+  .characterImageTwo {
+    background: url(./img/gameDesign/characterDesign/character6.gif);
+    background-size: 195%;
+    background-position: left;
+  }
+  .characterImageThree {
+    background: url(./img/gameDesign/characterDesign/character8.gif);
+    background-size: 210%;
+    background-position: right;
+  }
+}
+@media screen and (min-width: 640px) {
+  .characterImageOne {
+    background: url(./img/gameDesign/characterDesign/character7.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #232323;
+    background-position: center;
+  }
+  .characterImageTwo {
+    background: url(./img/gameDesign/characterDesign/character6.gif);
+    background-size: contain;
+    background-position: center;
+  }
+  .characterImageThree {
+    background: url(./img/gameDesign/characterDesign/character8.gif);
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (min-width: 890px) {
+  .characterImageTwo {
+    background: url(./img/gameDesign/characterDesign/character6.gif);
+    background-size: cover;
+    background-position: center;
+  }
+  .characterImageThree {
+    background: url(./img/gameDesign/characterDesign/character8.gif);
+    background-size: contain;
+    background-position: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .characterImageTwo {
+    background: url(./img/gameDesign/characterDesign/character6.gif);
+    background-size: 95%;
+    background-position: center;
+  }
+}
+/* CHARACTER DESIGN Section End */
+
+/* WORLD DESIGN SECTION Start*/
+#worldSection {
+  background: #12131e;
+  background: linear-gradient(#00000000, #000000ec),
+    url(./img/heroBackground/pixelonaut3_body2.png);
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.worldImageOne {
+  background: url(./img/gameDesign/worldDesign/worldDesign1.gif);
+  background-size: cover;
+  background-position: center;
+}
+.worldImageTwo {
+  background: url(./img/gameDesign/worldDesign/worldDesign2.gif);
+  background-size: cover;
+  background-position: center;
+}
+/* WORLD DESIGN Section End */
+
+/* GAME DEV SECTION*/
+#gameSection {
+  background: #12131e;
+  background: linear-gradient(#000000ec, #00000000),
+    url(./img/heroBackground/pixelonaut3_body.png);
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  height: 92vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gameImageOne {
+  background: url(./img/gameDesign/gameDesign/game1.gif);
+  background-size: cover;
+  background-position: center;
+}
+.gameImageTwo {
+  background: url(./img/gameDesign/gameDesign/game2.gif);
+  background-size: 120%;
+  background-position: top;
+}
+@media only screen and (min-width: 640px) {
+  .gameImageTwo {
+    background: url(./img/gameDesign/gameDesign/game2.gif);
+    background-size: cover;
+    background-position: top;
+  }
+}
+/* GAME DEV Section End */
+
+/* FOOTER Section Start*/
+footer {
+  background-color: #191b2b;
+  text-align: center;
+  width: 100vw;
+  height: 7.5vh;
+}
+.footerContainer {
+  padding: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer p {
+  color: white;
+  height: 100%;
+  width: 80vw;
+  font-size: 0.65rem;
+  letter-spacing: 0.1rem;
+}
+/* FOOTER Section End */

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- googleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&family=Sacramento&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- fontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/76f4b1934d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css" />
+    <title>lor3mPixum</title>
+  </head>
+  <body>
+    <!-- BACK TO TOP Button Start-->
+    <div
+      class="b2tBtnContainer"
+      onclick="topFunction()"
+      id="b2tBtn"
+      title="Go to top"
+    >
+      <img src="./img/icons/bt2Btn_selfmade2_border.png" alt="" />
+    </div>
+    <!-- BACK TO TOP Button End -->
+    <!-- NAVBAR Start-->
+    <header id="navbar">
+      <div class="navbar">
+        <div class="logo">
+          <a href="#heroContainer">
+            <h1 class="logoHeader">L<span>3</span>P</h1>
+          </a>
+        </div>
+        <div class="navDiv">
+          <nav>
+            <ul>
+              <li><a href="#aboutSection">about</a></li>
+              <li><a href="#serviceSection">services</a></li>
+              <li><a href="#contactSection">contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- NAVBAR End -->
+    <!-- HERO Section Start -->
+    <section id="heroContainer">
+      <div class="heroContainer">
+        <div class="heroDiv" id="heroDiv">
+          <h1 class="headerText">
+            Lor<span style="color: #ecbd6c">3</span>m_Pixum
+          </h1>
+          <button type="button" class="btn">
+            <a href="#aboutSection">enter</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- HERO Section End -->
+    <!-- ABOUT Section Start -->
+    <section id="aboutSection">
+      <div class="aboutHeader">
+        <h2 class="aboutHeader">
+          <span style="color: rgb(236, 189, 108)">abo</span>ut
+        </h2>
+      </div>
+      <div class="aboutContainer">
+        <div class="aboutBoxSmall aboutVisionText">
+          <p>
+            sometimes you need to venture into the unknown to find back to
+            yourself
+          </p>
+        </div>
+        <div class="aboutBoxLarge aboutBackgroundText">
+          <div class="aboutTextHeader">
+            <a href="#aboutSection" class="start"
+              ><div class="readMeContainer">
+                <img
+                  class="readMe"
+                  id="readMe"
+                  src="./img/icons/help.png"
+                  alt=""
+                />
+              </div>
+              <div class="alienPixelContainer">
+                <img
+                  class="alienPixel"
+                  id="alienPixel"
+                  src="./img/icons/alienPixelYellow.png"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+          <div class="aboutTextParagraph">
+            <div
+              class="typewriterBackground"
+              data-text="in this ever changing and expanding universe, many exciting modern games come to life every day and we love it!
+              ... but, we also love the world of nostalgic pixel-games. therefore we set out on a journey to develop high quality pixel-games and everything that comes along with it. heroic protagonists and antagonists, immersive environments and customized game mechanics. will you travel with us?"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+    <!-- SERVICE Section -->
+    <section id="serviceSection">
+      <div class="serviceHeader">
+        <h2 class="serviceHeader">
+          <span style="color: #ecbd6c">ser</span>vices
+        </h2>
+      </div>
+      <div class="serviceContainer">
+        <div class="serviceDuoBox">
+          <a href="./services.html#characterSection"
+            ><span class="serviceBox characterBox rellax" data-rellax-speed="7">
+              <span class="serviceText"><h2>character design</h2> </span>
+            </span></a
+          >
+          <div class="spacerDuoBox"></div>
+          <a href="./services.html#worldSection"
+            ><span class="serviceBox worldBox">
+              <span class="serviceText"><h2>world design</h2></span>
+            </span></a
+          >
+        </div>
+        <div class="serviceMonoBox">
+          <a href="./services.html#gameSection">
+            <div class="serviceBox gameBox">
+              <div class="serviceText">
+                <h2>game development</h2>
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- SERVICE Section End -->
+
+    <!-- CONTACT Section -->
+    <section id="contactSection">
+      <div class="contactHeader">
+        <h2 class="contactHeader">
+          <span style="color: #ecbd6c">con</span>tact
+        </h2>
+      </div>
+      <div class="contactContainer">
+        <div class="contactBox">
+          <div class="contactIcons">
+            <a href="https://github.com/escapingSamsara"
+              ><i class="fa-brands fa-github fa-2x"></i
+            ></a>
+            <a href="https://www.figma.com/@escapingsamsara"
+              ><i class="fa-brands fa-figma fa-2x"></i
+            ></a>
+            <a href="https://www.instagram.com"
+              ><i class="fa-brands fa-instagram fa-2x"></i
+            ></a>
+            <a href="https://codepen.io/escaping-samsara"
+              ><i class="fa-brands fa-codepen fa-2x"></i
+            ></a>
+          </div>
+          <div class="contactForm">
+            <form>
+              <input
+                name="name"
+                type="text"
+                class="feedback-input"
+                placeholder="name"
+              />
+              <input
+                name="email"
+                type="text"
+                class="feedback-input"
+                placeholder="e-mail"
+              />
+              <textarea
+                name="text"
+                class="feedback-input"
+                placeholder="whats never said is left unspoken, so go ahead and text us"
+              ></textarea>
+              <input type="submit" value="submit" />
+            </form>
+            <div class="contactFormImage">
+              <img
+                src="./img/icons/love-always-wins_yellooow.png"
+                class="logoHeart"
+                alt=""
+                --
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT Section End -->
+    <!-- FOOTER Section -->
+    <footer>
+      <div class="footerContainer">
+        <p>&copy2022 jakob pusterhofer all rights reserved.</p>
+        <p>dietrichsteinplatz 1, 8010 graz, austria</p>
+        <p>jpusterhofer@gmail.com</p>
+      </div>
+    </footer>
+    <!-- FOOTER Section End -->
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>

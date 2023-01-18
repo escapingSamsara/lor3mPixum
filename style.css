@@ -1,0 +1,737 @@
+/*--------------------
+breakPoints:
+xs < 576px
+sm > 576px
+md > 768px
+lg > 992px
+xl > 1200px
+xxl > 1440px
+---------------------*/
+
+/* GLOBAL CSS */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--pixelFont);
+}
+:root {
+  --pixelFont: 'VT323';
+  --yellowBrand: #ecbd6c;
+  --backgroundColor: #12131e;
+}
+/* Global CSS End */
+
+/* Back to Top Button Start*/
+.b2tBtnContainer img {
+  height: 2rem;
+  width: 2rem;
+  z-index: 99;
+}
+#b2tBtn {
+  display: none;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 99;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  animation: pulse 4s infinite linear;
+}
+#b2tBtn:hover {
+  transform: scale(1.15);
+}
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+/* Back to Top Button End */
+
+/* NAVBAR Start */
+#navbar {
+  background: transparent;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  box-shadow: 1px 1px 20px #12131e;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+.navbar {
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.logo {
+  padding-left: 1.5vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--pixelFont);
+  height: 5vh;
+  width: 40%;
+  color: white;
+}
+.logo span,
+.logo a,
+.logo h1 {
+  font-size: 1.65rem;
+  color: white;
+  text-decoration: none;
+}
+.logo span {
+  color: var(--yellowBrand);
+}
+.navDiv {
+  width: 60%;
+  padding-right: 1.5vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li {
+  margin: 0.5rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.65rem;
+  text-transform: lowercase;
+  font-family: var(--pixelFont), sans-serif;
+}
+/* Media Query NAVBAR */
+@media screen and (min-width: 800px) {
+  .logo span,
+  .logo a,
+  .logo h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+}
+/* NAVBAR End */
+
+/* HERO Section Start*/
+#heroContainer {
+  background: linear-gradient(#00000000, #000000ec),
+    url(./img/heroBackground/pixelonaut3_1.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+h1.headerText,
+h1.headerText span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-family: var(--pixelFont);
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+#heroDiv {
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 75%;
+  color: white;
+}
+#heroDiv button {
+  font-family: var(--pixelFont);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 2.25rem;
+  margin: 1vh auto 0%;
+  padding: 0 0 0.2rem;
+  background-color: var(--backgroundColor);
+  border: 2px solid white;
+  border-radius: 20px;
+  transition: 0.4s ease-in-out;
+  animation: pulse 4s infinite linear;
+}
+#heroDiv a {
+  text-decoration: none;
+  color: white;
+  padding: 2px;
+  font-size: 1.5rem;
+}
+#heroDiv button:hover {
+  background-color: var(--yellowBrand);
+}
+
+/* Media Query HERO Section */
+@media screen and (min-width: 640px) {
+  h1.headerText,
+  h1.headerText span {
+    font-size: 6rem;
+  }
+  #heroDiv a {
+    text-decoration: none;
+    color: white;
+    padding: 1%;
+    font-size: 2rem;
+  }
+}
+/* HERO Section End */
+
+/* ABOUT SECTION Start*/
+.aboutHeader,
+.aboutHeader span {
+  font-size: 4rem;
+  color: white;
+  font-family: var(--pixelFont);
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 0;
+}
+#aboutSection {
+  background: var(--backgroundColor);
+  background: linear-gradient(#000000ec, #00000000),
+    url(./img/heroBackground/pixelonaut3_body.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  height: 85vh;
+}
+.aboutBoxSmall {
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  width: 100%;
+  background: linear-gradient(#0000007f, #11121cf0),
+    url(./img/heroBackground/space2_4-frames.gif);
+  background-size: 100%;
+  background-position: center;
+  margin: 2% 1%;
+  padding: 1rem 0;
+}
+.aboutBoxLarge {
+  color: white;
+  width: 100%;
+  height: 65vh;
+  margin: 2% auto;
+}
+.aboutTextHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+  padding: 3rem 0 1.5rem;
+}
+/* FadeOut on click keyframes for JS onclick event aboutMe icon */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.aboutTextHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.aboutTextHeader h2 {
+  padding-top: 2rem;
+  font-size: 2.25rem;
+}
+.aboutTextParagraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2rem 0 0;
+  padding: 0.1rem;
+  width: 100%;
+  height: 80%;
+}
+.readMeContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.readMe {
+  position: absolute;
+  margin: 0 auto;
+  height: 6rem;
+  width: 6rem;
+  transition: all 2s ease-in-out;
+}
+.readMe:hover {
+  transform: scale(1.1);
+}
+.alienPixelContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.alienPixel {
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  transition: all 2s ease-in-out 1s;
+  display: none;
+}
+.typewriterBackground {
+  text-align: justify;
+  font-size: 1.5rem;
+}
+.aboutVisionText p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0rem 5%;
+  font-size: 1.5rem;
+}
+.aboutBackgroundText p {
+  padding: 2rem 0 0;
+  text-align: justify;
+  font-size: 1.45rem;
+  margin: 0rem 5%;
+}
+/* About Button 404 Start*/
+.container404 img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  z-index: 99;
+  margin: 1rem auto 0;
+}
+#Btn404 {
+  z-index: 99;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+#Btn404:hover {
+  transform: scale(1.1);
+}
+/* About Button 404 End */
+
+/* MEDIA QUERY: ABOUT SECTION */
+@media only screen and (min-width: 640px) {
+  .aboutBoxSmall {
+    max-width: 600px;
+  }
+  .aboutBoxLarge {
+    max-width: 600px;
+    height: 70%;
+    margin-bottom: 20%;
+  }
+  .aboutVisionText p {
+    font-size: 2.25rem;
+  }
+  .typewriterBackground {
+    text-align: justify;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+}
+/* ABOUT Section End */
+
+/* SERVICE SECTION */
+#serviceSection {
+  background: var(--backgroundColor);
+  background: linear-gradient(#00000000, #000000ec),
+    url(./img/heroBackground/pixelonaut3_body2.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+.serviceHeader,
+.serviceHeader span {
+  font-size: 4rem;
+  color: white;
+  font-family: var(--pixelFont);
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 0;
+}
+.serviceHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+.serviceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 75vh;
+}
+.serviceBox {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  min-width: 300px;
+  min-height: 25vh;
+}
+.serviceText {
+  display: block;
+  text-align: center;
+  /* position: relative;
+  top: 0%; */
+  height: 100%;
+  min-width: 100%;
+  font-size: 1.5rem;
+}
+.serviceText h2 {
+  height: 100%;
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.characterBox,
+.worldBox {
+  margin: 2% 0;
+}
+.gameBox {
+  margin: 2% 0 0;
+}
+.serviceBox a {
+  padding-top: 50%;
+}
+.serviceDuoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.characterBox {
+  background: linear-gradient(#00000000, #11121c70),
+    url(./img/gameDesign/characterDesign/character3.gif);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s ease-in-out;
+}
+.serviceBox:hover {
+  transform: scale(1.025);
+}
+.serviceContainer {
+  max-width: 1200px;
+}
+.worldBox {
+  background: linear-gradient(#00000000, #11121c70),
+    url(./img/gameDesign/worldDesign/worldDesign1.gif);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s ease-in-out;
+}
+.gameBox {
+  background: linear-gradient(#ffffff00, #11121c70),
+    url(./img/gameDesign/gameDesign/spaceship.gif);
+  background-size: 180%;
+  background-position: center;
+  margin-bottom: 2%;
+  transition: all 2s ease-in-out;
+}
+.gameBox:hover {
+  background-size: 280%;
+  transition: all 1s ease-in-out;
+}
+/* MEDIA QUERY: SERVICE SECTION */
+@media only screen and (min-width: 768px) {
+  .serviceDuoBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+  }
+  .spacerDuoBox {
+    width: 1%;
+    height: 100%;
+  }
+  .serviceBox {
+    margin: 0 2% 4%;
+    min-height: 35vh;
+  }
+  .serviceText {
+    top: 85%;
+    padding-bottom: 15px;
+  }
+  .serviceText h2 {
+    font-size: 1.75rem;
+  }
+  .serviceMonoBox {
+    min-width: 700px;
+  }
+  .gameBox {
+    background-size: 120%;
+  }
+  .gameBox:hover {
+    background-size: 140%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .serviceMonoBox {
+    min-width: 1000px;
+  }
+  .gameBox {
+    background-size: 110%;
+  }
+  .gameBox:hover {
+    background-size: 140%;
+  }
+}
+/* SERVICE Section END */
+
+/* CONTACT SECTION*/
+#contactSection {
+  background: var(--backgroundColor);
+  background: linear-gradient(#000000ec, #00000000),
+    url(./img/heroBackground/pixelonaut3_body3.png);
+  background-position: center;
+  background-size: cover;
+  height: 95vh;
+  width: 100%;
+  margin: 0;
+}
+
+.contactHeader,
+.contactHeader span {
+  font-size: 4rem;
+  color: white;
+  font-family: 'VT323';
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 0;
+}
+.contactHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 77.5vh;
+}
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  min-width: 300px;
+  max-width: 40%;
+  height: 75vh;
+  color: white;
+  background: linear-gradient(#0000007f, #11121cf0),
+    url(./img/heroBackground/space2_4-frames.gif);
+  background-size: 100%;
+  background-position: center;
+}
+.contactIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  padding: 4% 0;
+}
+.contactIcons a {
+  font-size: 1.25rem;
+  color: white;
+  transition: all 0.4s;
+}
+.contactIcons a:hover {
+  color: var(--yellowBrand);
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+.fa-brands a {
+  padding: 5%;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  justify-content: center;
+}
+form {
+  caret-color: transparent;
+  width: 80%;
+  height: 100%;
+}
+.feedback-input {
+  border-radius: 10px;
+  color: white;
+  font-family: 'VT323', sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+  padding: 10px;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+.feedback-input:focus {
+  border: 2px solid var(--yellowBrand);
+}
+textarea {
+  height: 220px;
+  resize: vertical;
+  overflow-y: scroll;
+}
+[type='submit'] {
+  font-family: 'VT323', sans-serif;
+  width: 100%;
+  background: #fff;
+  border: 0;
+  cursor: pointer;
+  color: black;
+  font-size: 1.5rem;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+[type='submit']:hover {
+  background: var(--yellowBrand);
+  transition: 0.3s;
+}
+.contactFormImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  margin: 5% 0 0 0;
+  width: 80%;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+}
+.contactFormImage img {
+  max-width: 80px;
+  max-height: 80px;
+  transform: scale(1);
+  animation: pulse 4s infinite linear;
+}
+/* Media Query: CONTACT Section */
+@media only screen and (min-width: 640px) {
+  .feedback-input {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .contactFormImage {
+    margin: 2% 0 0 0;
+  }
+  [type='submit'] {
+    font-size: 1.6rem;
+  }
+}
+/* CONTACT Section End */
+
+/* FOOTER Section Start*/
+footer {
+  background-color: #191b2b;
+  text-align: center;
+  width: 100vw;
+  height: 7.5vh;
+}
+.footerContainer {
+  position: relative;
+  top: 25%;
+  height: 50%;
+  padding: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer p {
+  color: white;
+  height: 100%;
+  width: 80vw;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  line-height: 0.5;
+}
+
+/* FOOTER Section End */
